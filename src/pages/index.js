@@ -5,7 +5,15 @@ import styled from 'styled-components';
 import img from '../images/header-background-2.jpg';
 // styles
 const Header = styled.header`
-  background-image: url(${img});
+   position: absolute;
+   height: 100%;
+   min-height: 500px;
+   width: 100%;
+   background: #161415 url(${img}) no-repeat top center;
+   background-size: cover !important;
+	-webkit-background-size: cover !important;
+   text-align: center;
+   overflow: hidden;
 `;
 
 const docLink = {
