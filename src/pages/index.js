@@ -1,5 +1,6 @@
 import * as React from "react"
-
+import 'nes.css/css/nes.min.css';
+import "@fontsource/press-start-2p"
 // styles
 const pageStyles = {
   color: "#232129",
@@ -128,56 +129,40 @@ const links = [
 // markup
 const IndexPage = () => {
   return (
-    <main style={pageStyles}>
-      <title>Home Page</title>
-      <h1 style={headingStyles}>
-        Congratulations
-        <br />
-        <span style={headingAccentStyles}>— you just made a Gatsby site! </span>
-        <span role="img" aria-label="Party popper emojis">
-          🎉🎉🎉
-        </span>
-      </h1>
-      <p style={paragraphStyles}>
-        Edit <code style={codeStyles}>src/pages/index.js</code> to see this page
-        update in real-time.{" "}
-        <span role="img" aria-label="Sunglasses smiley emoji">
-          😎
-        </span>
-      </p>
-      <ul style={listStyles}>
-        <li style={docLinkStyle}>
-          <a
-            style={linkStyle}
-            href={`${docLink.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-          >
-            {docLink.text}
-          </a>
-        </li>
-        {links.map(link => (
-          <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
-            <span>
-              <a
-                style={linkStyle}
-                href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-              >
-                {link.text}
-              </a>
-              {link.badge && (
-                <span style={badgeStyle} aria-label="New Badge">
-                  NEW!
-                </span>
-              )}
-              <p style={descriptionStyle}>{link.description}</p>
-            </span>
-          </li>
-        ))}
-      </ul>
-      <img
-        alt="Gatsby G Logo"
-        src="data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2a10 10 0 110 20 10 10 0 010-20zm0 2c-3.73 0-6.86 2.55-7.75 6L14 19.75c3.45-.89 6-4.02 6-7.75h-5.25v1.5h3.45a6.37 6.37 0 01-3.89 4.44L6.06 9.69C7 7.31 9.3 5.63 12 5.63c2.13 0 4 1.04 5.18 2.65l1.23-1.06A7.959 7.959 0 0012 4zm-8 8a8 8 0 008 8c.04 0 .09 0-8-8z' fill='%23639'/%3E%3C/svg%3E"
-      />
-    </main>
+    <header id="home">
+        <div className="row banner">
+            <div className="banner-text">
+                <h1 className="responsive-headline" style={{ textTransform: 'uppercase' }}>
+                    <p>bienvenido a mi portfolio</p>
+                    <p>soy leonardo badilla</p>
+                </h1>
+                <div className="nes-container is-rounded is-dark">
+                    <p style={{ textTransform: 'uppercase' }}>
+                        un <span>frontend developer</span> de barcelona, capaz de crear todo tipo de webapp's utilizando
+                        <span> javascript</span>.<br /> navega por el site clicando en el header y conoce más
+                    </p>
+                </div>
+                <hr />
+                <ul className="social">
+                    <li>
+                        <a rel="noopener noreferrer" target="_blank" href="https://twitter.com/vandaLbd">
+                            <i className="nes-icon twitter is-large" />
+                        </a>
+                    </li>
+                    <li>
+                        <a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/leonardo-badilla">
+                            <i className="nes-icon linkedin is-large" />
+                        </a>
+                    </li>
+                    <li>
+                        <a rel="noopener noreferrer" target="_blank" href="https://github.com/vandal777">
+                            <i className="nes-icon github is-large" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
   )
 }
 
